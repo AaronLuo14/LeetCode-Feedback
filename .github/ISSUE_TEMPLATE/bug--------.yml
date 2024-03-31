@@ -4,7 +4,7 @@ title: "[BUG] - <缺陷标题>"
 labels: []
 body:
   - type: input
-    id: username
+    id: 仲夏半镜
     attributes:
       label: "LeetCode 用户名"
       description: 填写你登录 LeetCode（中国区）的用户名
@@ -14,7 +14,7 @@ body:
     id: problem-details
     attributes:
       label: "问题号码、标题和链接"
-      placeholder: 1. 两数之和 https://leetcode.cn/problems/two-sum/description/
+      placeholder: 10.正则表达式匹配 https://leetcode.cn/problems/regular-expression-matching/
     validations:
       required: true
   - type: dropdown
@@ -37,7 +37,9 @@ body:
     id: bug-description
     attributes:
       label: "描述"
-      description: 描述你遇到的 bug
+      description: 算例存在矛盾，例如 s = 'aab', p = 'c*a*b'，结果为True；但s = 'aaa', p= 'aaaa'，结果却为False。然而此处 p='a'+s，可以看作p匹配了s。
+      从文中表述来看，似乎s在匹配后是p的子串即可，但部分算例又要求s只能是p的尾部子串（例如s='aab',p='c*a*b',True； s='ab',p='.*c',Fasle)
+      故文中表述和算例存在一定矛盾。
     validations:
       required: true
   - type: dropdown
